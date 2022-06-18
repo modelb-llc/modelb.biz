@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>fritzing Archives - Model B</title>
+	<atom:link href="https://www.modelb.biz/tag/fritzing/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.modelb.biz</link>
+	<description>Exerfy Your Games</description>
+	<lastBuildDate>Sat, 13 May 2017 17:02:58 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0</generator>
+
+<image>
+	<url>https://www.modelb.biz/wp-content/uploads/2016/08/cropped-Holoseat-Logo-Symbol-32x32.png</url>
+	<title>fritzing Archives - Model B</title>
+	<link>https://www.modelb.biz</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>From Fritzing to Circuit Maker &#8211; Changing EDA Software</title>
+		<link>https://www.modelb.biz/fritzing-circuit-maker-changing-eda-software/</link>
+					<comments>https://www.modelb.biz/fritzing-circuit-maker-changing-eda-software/#respond</comments>
+		
+		<dc:creator><![CDATA[Bryan Christian]]></dc:creator>
+		<pubDate>Sat, 13 May 2017 17:02:58 +0000</pubDate>
+				<category><![CDATA[Development News]]></category>
+		<category><![CDATA[circuit maker]]></category>
+		<category><![CDATA[eda]]></category>
+		<category><![CDATA[fritzing]]></category>
+		<guid isPermaLink="false">http://www.modelb.biz/?p=277</guid>
+
+					<description><![CDATA[<p>Holoseat continues to march forward, but we have started having issues with our electronic design (EDA) software, Fritzing.  Fritzing is a great product, however as we increase complexity and add new components sourcing accurate libraries is becoming a&#8230;</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/fritzing-circuit-maker-changing-eda-software/">From Fritzing to Circuit Maker &#8211; Changing EDA Software</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Holoseat continues to march forward, but we have started having issues with our electronic design (EDA) software, Fritzing.  Fritzing is a great product, however as we increase complexity and add new components sourcing accurate libraries is becoming a problem.  Given these challenges, we decided to evaluate a number of EDA software packages before generating any v0.4 schematics.</p>
+<h1>The Contenders</h1>
+<h2>Fritzing</h2>
+<p>Let&#8217;s start with <a href="http://fritzing.org/home/" target="_blank" rel="noopener noreferrer">Fritzing</a>.  We&#8217;ve been working with this software for about as long as the project has existed.  We know it, we&#8217;re familiar with it, and it works well.  The downside is library support.  We&#8217;ve repeatedly found the parts we needed didn&#8217;t exist.  Could we build the missing pieces?  Sure, but that&#8217;s not exactly something we&#8217;re good at, and it isn&#8217;t really a great use of our time.  More than once over the last year or two we&#8217;ve found a similar part and used it to mock up the wiring, then subbed in the real part later once it was available.  Not really the best way to create documentation.  This process has brought on some frustration and is what started us down the road of reviewing other packages.</p>
+<h2>KiCad</h2>
+<p><a href="http://kicad-pcb.org/" target="_blank" rel="noopener noreferrer">KiCad</a> was also evaluated.  We found the library support in KiCad to be as much of an issue as in Fritzing, if not more so.  It seems like a great product, but if the library support isn&#8217;t going to be any better, we&#8217;re just trading a software package we know for one we don&#8217;t.  It just didn&#8217;t make much sense.  Additionally, a number of forum posts when I was looking into the library issue pointed to people complaining about library accuracy.  All that added up for it to be a package we glanced at, but decided not to spend much time on.</p>
+<h2>Eagle</h2>
+<p><a href="https://www.autodesk.com/products/eagle/overview" target="_blank" rel="noopener noreferrer">Eagle</a> seemed like it might be an option.  It has the library support we need given the long history of the program.  In fact, many manufacturers of the various parts we&#8217;re using offer Eagle libraries.  And although the user interface seemed clumsy compared to the other programs, I felt like we could make it work.  Then we reviewed the licensing.  Holoseat is a Model B project and Model B is a commercial entity.   The only valid commercial licensing model for Eagle is subscription based and we&#8217;re still a startup without any income.  We could probably have skirted the issue in a number of ways, but that isn&#8217;t our style.  So, Eagle was out of the question, if only because of its cost.</p>
+<h2>Circuit Maker</h2>
+<p>Over the course of looking at the other options we found <a href="https://workspace.circuitmaker.com/" target="_blank" rel="noopener noreferrer">Circuit Maker</a>.  I saw a few advantages immediately.  As an Altium product derived from their commercial program Altium Designer, their available library set is quite large.  It&#8217;s designed specifically for working with open hardware projects including community features and cloud based project handling.  The forums appeared active, and a question I posted received a response in less than 24 hours.  Additionally, it can import Eagle files, so we can get the only object that doesn&#8217;t exist in their libraries from its Eagle library.</p>
+<h1>Sealing the Deal</h1>
+<p>There is one last advantage for Circuit Maker, but unlike the rest this one is personal.  The company I work for designs DC/DC power converters.  They use Altium Designer for their PCB drawings.  That means I have a number of people very familiar with the commercial version of the product that I can ask questions when we need a little help.</p>
+<p>The last consideration is the eventual need to fabricate circuit boards for Holoseat.  In reviewing articles, most said Fritzing was great for the type of work we&#8217;ve been doing (development).  But most recommend a different package for making a final product.  There&#8217;s a pretty large number of reasons, mostly feature related, that just make other tools better when trying to design a product that you hope to be able to produce in at least some volume.</p>
+<p>As you can probably guess based on the title, we&#8217;ve chosen Circuit Maker as our EDA software going forward.  I&#8217;m not sure it is a perfect choice, but it does what we need it to, it has licensing terms we can deal with, and it includes a great set of libraries to pull from.  The additional fact that I can talk to people at work to get advice is just the icing on the cake.  We&#8217;ll be working on getting the v0.4 documentation loaded into the <a href="https://workspace.circuitmaker.com/Projects/Details/Bryan-Christian-3/holoseat">Circuit Maker project</a> soon.</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/fritzing-circuit-maker-changing-eda-software/">From Fritzing to Circuit Maker &#8211; Changing EDA Software</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.modelb.biz/fritzing-circuit-maker-changing-eda-software/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

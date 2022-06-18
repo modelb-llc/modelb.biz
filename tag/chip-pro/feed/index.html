@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CHIP Pro Archives - Model B</title>
+	<atom:link href="https://www.modelb.biz/tag/chip-pro/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.modelb.biz</link>
+	<description>Exerfy Your Games</description>
+	<lastBuildDate>Sat, 29 Apr 2017 00:23:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0</generator>
+
+<image>
+	<url>https://www.modelb.biz/wp-content/uploads/2016/08/cropped-Holoseat-Logo-Symbol-32x32.png</url>
+	<title>CHIP Pro Archives - Model B</title>
+	<link>https://www.modelb.biz</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>2017 Sprint 2 Kick Off &#8211; Implementing HID on v0.4</title>
+		<link>https://www.modelb.biz/2017-sprint-2-kick-off-implementing-hid-on-v0-4/</link>
+					<comments>https://www.modelb.biz/2017-sprint-2-kick-off-implementing-hid-on-v0-4/#comments</comments>
+		
+		<dc:creator><![CDATA[J. Simmons]]></dc:creator>
+		<pubDate>Mon, 24 Apr 2017 23:39:33 +0000</pubDate>
+				<category><![CDATA[Development News]]></category>
+		<category><![CDATA[CHIP Pro]]></category>
+		<category><![CDATA[Feather]]></category>
+		<category><![CDATA[HID]]></category>
+		<guid isPermaLink="false">http://www.modelb.biz/?p=248</guid>
+
+					<description><![CDATA[<p>This post is part of a series covering Holoseat’s development. Look for one at the start of each sprint covering where we have been and where we are going. The Big Picture We just wrapped up Sprint 1&#8230;</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/2017-sprint-2-kick-off-implementing-hid-on-v0-4/">2017 Sprint 2 Kick Off &#8211; Implementing HID on v0.4</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<div id="attachment_273" style="width: 650px" class="wp-caption aligncenter"><a href="http://www.geograph.org.uk/photo/1386092"><img aria-describedby="caption-attachment-273" class="wp-image-273 size-full" src="https://www.modelb.biz/wp-content/uploads/2017/04/martin-addison-alternate-route.jpg" alt="Please Find Alternate Route - by Martin Addison" width="640" height="408" srcset="https://www.modelb.biz/wp-content/uploads/2017/04/martin-addison-alternate-route.jpg 640w, https://www.modelb.biz/wp-content/uploads/2017/04/martin-addison-alternate-route-300x191.jpg 300w, https://www.modelb.biz/wp-content/uploads/2017/04/martin-addison-alternate-route-580x370.jpg 580w" sizes="(max-width: 640px) 100vw, 640px" /></a><p id="caption-attachment-273" class="wp-caption-text">Please Find Alternate Route &#8211; by Martin Addison CC-By-SA</p></div>
+<p><i>This post is part of a series covering Holoseat’s development. Look for one at the start of each sprint covering where we have been and where we are going.</i></p>
+<h1>The Big Picture</h1>
+<p>We just <a href="https://opendesignengine.net/news/69">wrapped up Sprint 1</a> of 2017 and <a href="https://opendesignengine.net/news/70">spun up Sprint 2</a>.  As anticipated, Sprint 1 was a busy sprint, full of technical, business, and crowd source campaign Product Backlog Items (PBIs).  The Sprint 1 plan was designed to move us toward our dual 2017 goals:  finalize the v0.4 hardware and to set up Holoseat’s beta testing.  We also had several administrative tasks related to running the LLC and making sure our business systems are healthy.  These administrative tasks were just as important as meeting our plan as they included minor details like taxes and mandatory reporting.  <em>Just remember everyone, running an open source hardware startup is not all hacking and fun.</em>  You also have to do all those things they teach business majors.</p>
+<h1>How We Did Last Sprint</h1>
+<h2>Review</h2>
+<p>Now it is time to report on how we did during Sprint 1.  If this was a football game, I would say we only managed to score a field goal.  While we completed most of our PBIs and managed to keep up a steady pace during most of the sprint, we fell noticeably short of the end zone.</p>
+<p>The remaining work on one of the PBIs is so small it is laughable that we did not complete it.  We literally just need to get the correct set of signatures on one last document to claim done on BIZ-07.  On the other hand, failing to complete DEV-06 is a significant setback.  The goal of DEV-06 was to test our ability to implement Human Interface Device (HID) keyboard emulation from our new controller board.  Until we have HID keyboard emulation working, nearly all other development is blocked until we fix this.</p>
+<p>But fear not, all is not as dire as it may sound.  First, we have a fallback implementation in mind that has low development risk.  Second, our research into crowd source campaigns has taught us about campaign timing and marketing.  As a result of these lessons we are adjusting our goals for 2017.  Instead of pushing through with our plan for a crowd funded beta test program, we are going to build up Holoseat&#8217;s marketing reach.  Please <a href="https://www.modelb.biz/contact/">drop us a line</a> if you would like to volunteer as part of our marketing team (we are looking at you, social media natives).</p>
+<h2>Retrospective</h2>
+<p>All of which takes us to our lessons learned during Sprint 1.  First, let&#8217;s take a look at the good news.  Despite the one major setback, we are pleased with how the planning and day-to-day management of the sprint worked.  We selected the right amount (and generally the right kind) of work.  We also maintained a pretty even pace throughout the sprint.  However, we still fell behind on documentation a couple of times.  New processes have been put in place help us stay current where documentation is concerned going forward.</p>
+<p>Of course, the big lessons are all about DEV-06.  The first lesson is to &#8220;stick to the plan!&#8221;  It turns out the Sprint 1 plan had an escape hatch for DEV-06:  DEV-07 (implement HID keyboard interface via an Arduino based board, like our previous controller the Feather).  However, we failed to leverage this part of our plan, at all.  We won&#8217;t be making that mistake again.</p>
+<p>The other major take away from DEV-06 is that we planned the HID keyboard development backwards.  We should have started with the safe bet (DEV-07 and its reliance on technology we have been using from almost day one) and only moved on to the more challenging implementation after we had a working solution.  This way, if we had gotten to the end of the sprint and we had only completed DEV-07, we would still have a working implementation for  v0.4.  We can always come back later and improve the design with the more challenging implementation.</p>
+<h1>What We Are Doing This Sprint</h1>
+<p>So, what can you expect from Sprint 2?  First and foremost, you can expect DEV-07 to be completed.  We are also experimenting with a couple of potential architecture changes for the Holoseat controller.  The first change is possibly using <a href="https://blog.hypriot.com/post/docker-supported-on-chip-computer/">Docker on the CHIP</a> Pro to <a href="https://opendesignengine.net/boards/36/topics/1263">make it easier to set up the software stack</a>.  The second potential change is moving the controller hardware down to the exercise equipment.  And of course, we are going to get that last set of signatures for our paperwork and continue to improve our documentation.  You can see the full list of PBIs on our Sprint 2 plan (click the Sprint 2 tab) and our complete backlog (click the Backlog tab) in our <a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml">2017 planning document</a>.</p>
+<p>As always, be sure to <a href="https://www.modelb.biz/newsletter-signup/">sign up for our newsletter</a> to keep up on all things Holoseat.  And you can follow the week to week details of this, and future sprints, on the Holoseat project <a href="https://opendesignengine.net/projects/holoseat/news">News page</a> (<a href="https://opendesignengine.net/projects/holoseat/news.atom?key=4fad3204e4725c1db27eb4400dca128e87eba5ab">Atom feed</a>).</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/2017-sprint-2-kick-off-implementing-hid-on-v0-4/">2017 Sprint 2 Kick Off &#8211; Implementing HID on v0.4</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.modelb.biz/2017-sprint-2-kick-off-implementing-hid-on-v0-4/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

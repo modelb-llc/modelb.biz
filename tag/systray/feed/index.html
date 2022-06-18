@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>systray Archives - Model B</title>
+	<atom:link href="https://www.modelb.biz/tag/systray/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.modelb.biz</link>
+	<description>Exerfy Your Games</description>
+	<lastBuildDate>Tue, 22 Nov 2016 02:10:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0</generator>
+
+<image>
+	<url>https://www.modelb.biz/wp-content/uploads/2016/08/cropped-Holoseat-Logo-Symbol-32x32.png</url>
+	<title>systray Archives - Model B</title>
+	<link>https://www.modelb.biz</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Windows System Tray App</title>
+		<link>https://www.modelb.biz/windows-system-tray-app/</link>
+					<comments>https://www.modelb.biz/windows-system-tray-app/#respond</comments>
+		
+		<dc:creator><![CDATA[Bryan Christian]]></dc:creator>
+		<pubDate>Fri, 04 Jul 2014 12:00:14 +0000</pubDate>
+				<category><![CDATA[Development News]]></category>
+		<category><![CDATA[arduino cli]]></category>
+		<category><![CDATA[systray]]></category>
+		<category><![CDATA[windows]]></category>
+		<guid isPermaLink="false">http://www.modelb.biz/?p=193</guid>
+
+					<description><![CDATA[<p>Just wanted to go ahead and post that if all goes well I should have a preliminary version of the Windows System Tray application up in SVN this weekend. It allows you to specify the key to be&#8230;</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/windows-system-tray-app/">Windows System Tray App</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Just wanted to go ahead and post that if all goes well I should have a preliminary version of the Windows System Tray application up in SVN this weekend. It allows you to specify the key to be pressed and reconfigure the break point at which the Holoseat will swap over to holding down the key from doing single a single key press. I&#8217;ve not done development in a long time, so I&#8217;m rusty and this is taking a while. Big thing here is the SVN libraries are loaded into the application itself at this point to make way for uploading the firmware file automatically. We&#8217;ll need to add in a double check to confirm the firmware downloaded is compatible with the system tray application itself. We&#8217;re still working out exactly how to do that. Also, an updated Fritzing file has been uploaded but are not yet linked in to the documentation. I built them based on my build. This means it is using the proto board and the currently used components. If you compare the assembly instructions to the schematics you&#8217;ll find they don&#8217;t agree. This newly uploaded file does. I&#8217;ll see if I can&#8217;t get it linked to replace the other sometime soon, although I haven&#8217;t spent too much time with ODE so I might have to ask J. about that.</p>
+<p>So why the Windows app? We&#8217;re looking at using the application to handle reconfiguration in place of the slide potentiometer. It may not be quite as easy to adjust while playing as the slide pot. would be, but since we had been talking about an application anyway and this simplifies the hardware it just makes a lot of sense. We&#8217;re also thinking this could eventually be used to detect what games are running and swap out configurations on the fly, get metrics on usage, and more. For now, it just reprograms the thing using the Arduino 1.5 beta branch since that has a CLI build/publish tool that I was able to integrate. The variables held in the .h file that control walking rate, the key press, and any other settings we decide need to be handled. The tool is also using that .h as it&#8217;s own configuration file by pulling the settings it needs (that the Holoseat doesn&#8217;t) out of comments that are embedded. I&#8217;ll have documentation on all that written up after I get the whole thing checked in. Hopefully I&#8217;ll have more to add on all of this later this weekend.</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/windows-system-tray-app/">Windows System Tray App</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.modelb.biz/windows-system-tray-app/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

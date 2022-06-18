@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>leonardo Archives - Model B</title>
+	<atom:link href="https://www.modelb.biz/tag/leonardo/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.modelb.biz</link>
+	<description>Exerfy Your Games</description>
+	<lastBuildDate>Tue, 22 Nov 2016 02:04:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0</generator>
+
+<image>
+	<url>https://www.modelb.biz/wp-content/uploads/2016/08/cropped-Holoseat-Logo-Symbol-32x32.png</url>
+	<title>leonardo Archives - Model B</title>
+	<link>https://www.modelb.biz</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Assembly has begun!</title>
+		<link>https://www.modelb.biz/assembly-has-begun/</link>
+					<comments>https://www.modelb.biz/assembly-has-begun/#respond</comments>
+		
+		<dc:creator><![CDATA[J. Simmons]]></dc:creator>
+		<pubDate>Sun, 22 Sep 2013 12:00:59 +0000</pubDate>
+				<category><![CDATA[Development News]]></category>
+		<category><![CDATA[arduino]]></category>
+		<category><![CDATA[leonardo]]></category>
+		<category><![CDATA[progress]]></category>
+		<category><![CDATA[serial i/o]]></category>
+		<guid isPermaLink="false">http://www.modelb.biz/?p=185</guid>
+
+					<description><![CDATA[<p>Friday afternoon the last of the parts arrived ahead of schedule. You can see them in the image below. Check out the Assembly Instructions to follow along and build your own prototype. With parts in hand, I spent&#8230;</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/assembly-has-begun/">Assembly has begun!</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Friday afternoon the last of the parts arrived ahead of schedule. You can see them in the image below. Check out the <a href="https://opendesignengine.net/projects/holoseat/wiki/Assembly_Instructions?version=4">Assembly Instructions</a> to follow along and build your own prototype.</p>
+<p><img class="aligncenter" src="http://farm6.staticflickr.com/5547/9858690876_837a894690_c.jpg" alt="Holoseat v0.2 Components " /></p>
+<p>With parts in hand, I spent most of the day Saturday at <a href="http://www.daytondiode.org/">Dayton Diode</a> working on implementing the basic walk command. This feature recreates the functionality of the original prototype, simply giving the user the ability to walk in video games by pedaling a bike or elliptical machine. In addition to building the prototype, I also took some time to experiment with documenting OSHW projects. Using the Flickr app on my phone, I took photos of each step (making sure to enter useful titles and descriptions for each photo) and uploaded them to an <a href="http://www.flickr.com/photos/jedibfa/sets/72157635730270125/">assembly instructions photo set</a> in Flickr. This let me quickly and easily take notes as I worked which I then copied and pasted into the <a href="https://opendesignengine.net/projects/holoseat/wiki/Assembly_Instructions?version=4">Assembly Instructions</a> in less than half an hour. Not a bad investment of time to get an entire weekend&#8217;s work documented.</p>
+<p>By the end of the day Saturday I had things working well enough I could play games. So I went home and &#8220;tested&#8221; the Holoseat. By which, I mean I played several hours of Star Wars The Old Republic using the new Holoseat. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f609.png" alt="😉" class="wp-smiley" style="height: 1em; max-height: 1em;" /> I was basically pleased, but I noticed a couple of problems.</p>
+<p>When I got up this morning, I decided to have a look at the previous night&#8217;s bugs. The first thing I did was to add serial debugging using this <a href="http://arduino.cc/en/Serial/IfSerial">information on serial i/o</a> (note the special case for the Leonardo) and this <a href="http://forum.arduino.cc/index.php?topic=46900.0">information on #ifdef</a> (the #ifdef trick is something we use n C all the time, so it was nice to see it works in Arduino). I should also point out during all of this work with serial communications on the Leonardo, I stumbled upon a little oddity of the Leonardo. It turns out the board takes on two different COM ports in Windows. The first is the bootloader and is only visible when the board first starts up and when it is loading code. The second is the COM port of the virtual serial interface used when the board is running. This second port does not show up in my list of printers/devices in Windows, but does show up in the Device Manager. This second COM port is the one which the Arduino IDE should be set to use so it can automatically upload code correctly and the Serial Monitor can connect to the Arduino.</p>
+<p>After I got the serial debug statements working, I found a number of bugs (I will spare you the gory details, but you can take a look at the source code in the SVN repository if you are interested). Thankfully, I was able to address all of the software bugs I found, thanks in no small part to the ability to send debug statement to my PC.</p>
+<p>With the software bugs out of the way, I turned my attention to the system level bugs from the night before. While working on one of the issues, I had an inspiration to invert the walk speed calculations from counting steps to timing steps. This let me increase the frequency at which I poll for walking speed so the system can stop walking in under a second as opposed to the original code which could take as much as a second. Testing tonight shows this level of response in stopping is pretty close to what we need (if not exactly what we need). I was also able to deal with an odd stuttering on the first step in a walk cycle, which only leaves one issue from the first night of testing.</p>
+<p>Considering the reviews of the reed switch said the magnet was too weak, this is hardly surprising. To be left with only this issue open after the first weekend&#8217;s work is great progress. The rest of the week will focus on testing to make sure the basic walk functionality is robust. Look for another report next weekend, when I should start working on the next feature.</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/assembly-has-begun/">Assembly has begun!</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.modelb.biz/assembly-has-begun/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Bill of Materials drafted, let&#8217;s order some parts</title>
+		<link>https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/</link>
+					<comments>https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/#respond</comments>
+		
+		<dc:creator><![CDATA[J. Simmons]]></dc:creator>
+		<pubDate>Mon, 16 Sep 2013 12:00:56 +0000</pubDate>
+				<category><![CDATA[Development News]]></category>
+		<category><![CDATA[arduino]]></category>
+		<category><![CDATA[leonardo]]></category>
+		<category><![CDATA[OSHW]]></category>
+		<category><![CDATA[v0.2]]></category>
+		<guid isPermaLink="false">http://www.modelb.biz/?p=182</guid>
+
+					<description><![CDATA[<p>So, after completing the v0.2 Detailed Design I turned my attention to the BOM. Since this is still development prototype, I wanted to source components which can be bread boarded using a prototype shield and mini-breadboard. The previous&#8230;</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/">Bill of Materials drafted, let&#8217;s order some parts</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>So, after completing the v0.2 <a href="https://opendesignengine.net/projects/holoseat/wiki/Detailed_Design?version=6">Detailed Design</a> I turned my attention to the <a href="https://opendesignengine.net/projects/holoseat/wiki/BOM?version=3">BOM</a>. Since this is still development prototype, I wanted to source components which can be bread boarded using a prototype shield and mini-breadboard. The previous version of the *Holoseat* was built using this approach, and I find it creates a usable, near finished product while maintaining the flexibility of bench top breadboarding. And, since my soldering skills leave something to be desired, I wanted to find a pre-assembled prototype shield (which, unfortunately ruled out <a href="http://www.adafruit.com/products/51">Adafruit&#8217;s Prototype Shield</a>).</p>
+<p>Since I am an Amazon Prime member, I often turn to Amazon for my initial search for almost everything. And, it should come as no surprise that there are plenty of Arduino related products on Amazon. As I was searching for prototype shields, I quickly came across <a href="http://www.amazon.com/SainSmart-Prototyping-Prototype-Breadboard-arduino/dp/B0079WI2MK/ref=sr_1_1?ie=UTF8&amp;qid=1379362952&amp;sr=8-1&amp;keywords=sainsmart+prototype+shield">this one</a> (see image below) from <a href="http://www.sainsmart.com/">SainSmart</a>. It looked like a pretty good deal. It&#8217;s a good price and includes jumper wires for use with the breadboard.</p>
+<p><img class="aligncenter" src="http://ecx.images-amazon.com/images/I/51PTiDqW6XL._SX385_.jpg" alt="SainSmart Arduino Prototype Shield" /></p>
+<p>As I wrapped up the BOM and I continued looking around Amazon, I came across this <a href="http://www.amazon.com/SainSmart-Leonardo-Tutorial-Instruction-Projects/dp/B00CXE5KQU/ref=sr_1_1?s=toys-and-games&amp;ie=UTF8&amp;qid=1379362857&amp;sr=1-1&amp;keywords=leonardo+kit">Intro to Arduino Kit</a> which includes a Leonardo board (see the <a href="https://opendesignengine.net/projects/holoseat/wiki/Detailed_Design?version=6">Detailed Design</a> for info on why we are moving to the Leonardo). Now this was very tempting. It includes pretty much everything from the <a href="https://opendesignengine.net/projects/holoseat/wiki/BOM?version=3">BOM</a> plus extra stuff for later experimentation, and at a nearly $20 savings over ordering components individually. Needless to say, I was pretty excited. But, I am thorough shopper, and truth be told I was not familiar with SainSmart. So, I decided to do some Googling to make sure this was really as good a deal as it seems. Boy am I glad I did.</p>
+<p>At first, I didn&#8217;t find much info one way or another. There were a couple of somewhat negative forum posts which I didn&#8217;t find very helpful on their own. But then I came across <a href="http://www.reddit.com/r/arduino/comments/16slmd/arduino_pins_protoshield_and_sainsmart_motorshield/">this thread</a> on Reddit. It looks like SainSmart is not being a good OSHW citizen (note, I have nothing against cloners, but I do have a problem with people not following license and trademark requirements, let alone changing components without proper documentation). Combined with the few bits I could gather from the other forum posts, I just cannot justify going with SainSmart for any components until I hear better news about their behavior with regards to OSHW.</p>
+<p>So, back to Amazon and Google I went looking for a prototype shield. The good news is the Arduino team has an assembled shield which Amazon sells. Plus, there is a mini-breadboard at Amazon which looks like it should fit on the shield. A few quick adjustments to the Bill of Materials, and it was done. Now it&#8217;s time to order parts. Woot!</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/">Bill of Materials drafted, let&#8217;s order some parts</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

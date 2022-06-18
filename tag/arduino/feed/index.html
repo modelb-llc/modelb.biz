@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>arduino Archives - Model B</title>
+	<atom:link href="https://www.modelb.biz/tag/arduino/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.modelb.biz</link>
+	<description>Exerfy Your Games</description>
+	<lastBuildDate>Fri, 29 Sep 2017 02:23:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0</generator>
+
+<image>
+	<url>https://www.modelb.biz/wp-content/uploads/2016/08/cropped-Holoseat-Logo-Symbol-32x32.png</url>
+	<title>arduino Archives - Model B</title>
+	<link>https://www.modelb.biz</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>There and Back Again: An OSHW Project’s Tale &#8211; Part 1</title>
+		<link>https://www.modelb.biz/back-oshw-projects-tale-part-1/</link>
+					<comments>https://www.modelb.biz/back-oshw-projects-tale-part-1/#respond</comments>
+		
+		<dc:creator><![CDATA[J. Simmons]]></dc:creator>
+		<pubDate>Fri, 29 Sep 2017 02:23:48 +0000</pubDate>
+				<category><![CDATA[Development News]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[arduino]]></category>
+		<category><![CDATA[OSHW]]></category>
+		<category><![CDATA[planning]]></category>
+		<guid isPermaLink="false">http://www.modelb.biz/?p=316</guid>
+
+					<description><![CDATA[<p>This is the first in a series of posts recapping our 2017 Holoseat development and sharing our 2018 plan. In this post we look at the plan for 2017, aimed at taking a near production version of Holoseat&#8230;</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/back-oshw-projects-tale-part-1/">There and Back Again: An OSHW Project’s Tale &#8211; Part 1</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><em>This is the first in a series of posts recapping our 2017 Holoseat development and sharing our 2018 plan. In this post we look at the plan for 2017, aimed at taking a near production version of Holoseat to SyndCon 2017.</em></p>
+<p>This past February we posted about our <a href="https://www.modelb.biz/arduino-chip-looking-back-2016-kicking-off-2017/">progress during 2016 and our plans for 2017</a>. In that post we identified two key goals for 2017, to be completed by SyndCon in August. Those goals were:</p>
+<ol>
+<li>Finalize the hardware design needed to address the key feedback from demos at SyndCon 2016.</li>
+<li>Run a private beta test program for Holoseat to vet the design before releasing version 1.0.</li>
+</ol>
+<p>So how did we do? We got back from SyndCon a few weeks ago and I am happy to report it was a complete success. But I must admit, the way we achieved that success and the Holoseat we took to SyndCon were quite different than what I envisioned when we wrote that post back in February. To understand why it is best we take a look at each goal one at a time.</p>
+<h1>Goal 1 &#8211; Finalize Hardware Design</h1>
+<p>Two pieces of feedback drove the hardware design work called for in the first goal. The first piece of feedback was an unanticipated need to tweak Holoseat’s settings every time we changed players or games. One setting in particular, trigger cadence &#8211; the pedaling speed required for Holoseat to recognize a player is walking, took half of the demo time to dial in during most demos. Our intended solution was to migrate from an Arduino controller board to a significantly more powerful one, the <a href="https://getchip.com/pages/chippro" target="_blank" rel="noopener">CHIP Pro</a>.  This change would enable on board management of player specific profiles. These profiles would capture each individual player’s settings per game enabling players to switch out Holoseat settings as easily as they switched between games.</p>
+<p>The second piece of feedback driving Goal 1 was a desire for faster response times from Holoseat.  Take a look at the video below to see the v0.3 response times for yourself.</p>
+<p><iframe title="Holoseat v0.3 Response Time" width="1170" height="658" src="https://www.youtube.com/embed/FrjTI86OOA4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>While not captured in the February blog post, we had a line of research lined up to address this request.   But, we prioritized this research lower than incorporating the new controller board. The irony of this decision will become apparent in Part 2 of this series of blog posts.</p>
+<h1>Goal 2 &#8211; Run the Beta Test</h1>
+<p>How would you fund the development and manufacturing of a beta design for a new hardware project? If your answer is “KickStarter!” you are very close to where we were in our thinking last February.</p>
+<p>Sadly, running a successful crowd source campaign takes more time, and a greater social media presence, than we had in 2017. Thankfully we came to this realization (through careful research) before we got too far into the year. At the time we thought we were completely blocked on this goal.  So, we spent most of 2017 assuming we would have to wait at least a year before we could engage outside players as testers.</p>
+<p>But in agile projects like Holoseat, being blocked does not mean things are hopeless. Blocks are meant to be resolved and once they are you can get back to working on implementing your plan. Sometimes the trick to resolving blocks is to recognize how a completely different solution, one that is not blocked, can achieve the stated goals.</p>
+<hr />
+<p><em>Stay tuned for Part 2 where we share what actually happened in 2017 and Part 3 where we lay out the 2018 plan, which has us coming full circle in our quest to find the right controller board for Holoseat.</em></p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/back-oshw-projects-tale-part-1/">There and Back Again: An OSHW Project’s Tale &#8211; Part 1</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.modelb.biz/back-oshw-projects-tale-part-1/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>From Arduino to CHIP &#8211; Looking Back on 2016 and Kicking Off 2017</title>
+		<link>https://www.modelb.biz/arduino-chip-looking-back-2016-kicking-off-2017/</link>
+					<comments>https://www.modelb.biz/arduino-chip-looking-back-2016-kicking-off-2017/#comments</comments>
+		
+		<dc:creator><![CDATA[J. Simmons]]></dc:creator>
+		<pubDate>Wed, 22 Feb 2017 02:25:11 +0000</pubDate>
+				<category><![CDATA[Development News]]></category>
+		<category><![CDATA[arduino]]></category>
+		<category><![CDATA[C.H.I.P.]]></category>
+		<category><![CDATA[IOT]]></category>
+		<category><![CDATA[OSHW]]></category>
+		<guid isPermaLink="false">http://www.modelb.biz/?p=223</guid>
+
+					<description><![CDATA[<p>Last year was all about migrating Holoseat from a hobby project to a commercial venture. We started the year by incorporating Model B, LLC and transferring the project to the Model B banner. We then began to formalize&#8230;</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/arduino-chip-looking-back-2016-kicking-off-2017/">From Arduino to CHIP &#8211; Looking Back on 2016 and Kicking Off 2017</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Last year was all about migrating Holoseat from a hobby project to a commercial venture. We started the year by incorporating <a href="https://www.modelb.biz/">Model B, LLC</a> and transferring the project to the Model B banner. We then began to formalize our development approach setting up an agile process to capture and track our work on Holoseat v0.3 (the first prototype designed for public demonstrations). The spring and summer were consumed by development work and preparations for <a href="https://www.modelb.biz/holoseat-is-heading-back-to-syndcon/">SyndCon</a>.</p>
+<p>SyndCon was <a href="https://www.modelb.biz/demos-panels-and-podcasts-holoseat-at-syndcon-2016/">amazing</a>! Our fellow Syndies gave us great feedback and encouraged us to bring a Holoseat to market as soon as possible (some even volunteered to help with Holoseat development and testing). Needless to say, we came home with the wind at our backs, but work and life made it hard to fully capture that energy and we hit a snag in the <a href="https://www.modelb.biz/an-overview-of-sprint-6-and-what-happened-to-sprint-5/">following sprint</a>. Still, we closed the year strong, updating our open source documentation and getting v0.3 <a href="https://www.modelb.biz/exciting-start-to-2017-holoseat-is-certified-as-open-source-hardware/">certified as open source hardware</a>.</p>
+<div id="attachment_215" style="width: 310px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-215" loading="lazy" class="size-medium wp-image-215" src="https://www.modelb.biz/wp-content/uploads/2017/01/holoseat-v0.3-cert-300x203.png" alt="" width="300" height="203" srcset="https://www.modelb.biz/wp-content/uploads/2017/01/holoseat-v0.3-cert-300x203.png 300w, https://www.modelb.biz/wp-content/uploads/2017/01/holoseat-v0.3-cert.png 545w" sizes="(max-width: 300px) 100vw, 300px" /><p id="caption-attachment-215" class="wp-caption-text">Holoseat v0.3 OSHW Certification</p></div>
+<p>So, what&#8217;s in store for 2017? We have two related goals for this year. The first goal is to finalize the hardware design for the Holoseat to support the features on our long term roadmap. The second goal is to run a private beta testing program.  Bryan and I are committed to delivering v1.0 compatible hardware to our beta testers so they can get production level features and support just by upgrading their firmware. This commitment is why it is so important that we finalize the hardware design this year.</p>
+<p>While our first sprint of 2017 has not quite started yet, we have not been idle. Bryan and I have spent the first part of the year researching and testing new controller options for Holoseat.</p>
+<p>From the beginning, the Holoseat Controller has been based on the Arduino family of development boards, starting with the <a href="https://www.arduino.cc/en/Main/arduinoBoardDuemilanove" target="_blank">Duemilanove</a> to the <a href="https://www.arduino.cc/en/Main/arduinoBoardLeonardo" target="_blank">Leonardo</a> to <a href="https://www.adafruit.com/feather" target="_blank">Adafruit&#8217;s Feather</a> boards.  Arduinos have served us well, but we are looking to much more with Holoseat and we need something with more power and more options for interfacing with the world. Today I am happy to report that we have selected <a href="https://getchip.com/" target="_blank">Next Thing Computing</a>&#8216;s <a href="https://getchip.com/pages/chip" target="_blank">C.H.I.P platform</a>, specifically their <a href="https://getchip.com/pages/chippro" target="_blank">Chip Pro</a>. We already have the dev kits in (shown below) and are super excited to be working with this exciting new platform.</p>
+<div id="attachment_226" style="width: 235px" class="wp-caption aligncenter"><a href="https://www.modelb.biz/wp-content/uploads/2017/02/CHIP-Pro-1.jpg"><img aria-describedby="caption-attachment-226" loading="lazy" class="wp-image-226 size-medium" src="https://www.modelb.biz/wp-content/uploads/2017/02/CHIP-Pro-1-225x300.jpg" alt="CHIP Pro Dev Kit" width="225" height="300" srcset="https://www.modelb.biz/wp-content/uploads/2017/02/CHIP-Pro-1-225x300.jpg 225w, https://www.modelb.biz/wp-content/uploads/2017/02/CHIP-Pro-1-768x1024.jpg 768w, https://www.modelb.biz/wp-content/uploads/2017/02/CHIP-Pro-1-580x773.jpg 580w" sizes="(max-width: 225px) 100vw, 225px" /></a><p id="caption-attachment-226" class="wp-caption-text">CHIP Pro Dev Kit</p></div>
+<p>Want to get involved?  Head on over to the <a href="http://dev.holoseat.com">project site</a> and leave us a message on the forums.  Want to keep up with all things Holoseat?  <a href="https://www.modelb.biz/newsletter-signup/">Subscribe to our mailing list</a>.  And stay tuned for the details of the first sprint of 2017.</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/arduino-chip-looking-back-2016-kicking-off-2017/">From Arduino to CHIP &#8211; Looking Back on 2016 and Kicking Off 2017</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.modelb.biz/arduino-chip-looking-back-2016-kicking-off-2017/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Assembly has begun!</title>
+		<link>https://www.modelb.biz/assembly-has-begun/</link>
+					<comments>https://www.modelb.biz/assembly-has-begun/#respond</comments>
+		
+		<dc:creator><![CDATA[J. Simmons]]></dc:creator>
+		<pubDate>Sun, 22 Sep 2013 12:00:59 +0000</pubDate>
+				<category><![CDATA[Development News]]></category>
+		<category><![CDATA[arduino]]></category>
+		<category><![CDATA[leonardo]]></category>
+		<category><![CDATA[progress]]></category>
+		<category><![CDATA[serial i/o]]></category>
+		<guid isPermaLink="false">http://www.modelb.biz/?p=185</guid>
+
+					<description><![CDATA[<p>Friday afternoon the last of the parts arrived ahead of schedule. You can see them in the image below. Check out the Assembly Instructions to follow along and build your own prototype. With parts in hand, I spent&#8230;</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/assembly-has-begun/">Assembly has begun!</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Friday afternoon the last of the parts arrived ahead of schedule. You can see them in the image below. Check out the <a href="https://opendesignengine.net/projects/holoseat/wiki/Assembly_Instructions?version=4">Assembly Instructions</a> to follow along and build your own prototype.</p>
+<p><img class="aligncenter" src="http://farm6.staticflickr.com/5547/9858690876_837a894690_c.jpg" alt="Holoseat v0.2 Components " /></p>
+<p>With parts in hand, I spent most of the day Saturday at <a href="http://www.daytondiode.org/">Dayton Diode</a> working on implementing the basic walk command. This feature recreates the functionality of the original prototype, simply giving the user the ability to walk in video games by pedaling a bike or elliptical machine. In addition to building the prototype, I also took some time to experiment with documenting OSHW projects. Using the Flickr app on my phone, I took photos of each step (making sure to enter useful titles and descriptions for each photo) and uploaded them to an <a href="http://www.flickr.com/photos/jedibfa/sets/72157635730270125/">assembly instructions photo set</a> in Flickr. This let me quickly and easily take notes as I worked which I then copied and pasted into the <a href="https://opendesignengine.net/projects/holoseat/wiki/Assembly_Instructions?version=4">Assembly Instructions</a> in less than half an hour. Not a bad investment of time to get an entire weekend&#8217;s work documented.</p>
+<p>By the end of the day Saturday I had things working well enough I could play games. So I went home and &#8220;tested&#8221; the Holoseat. By which, I mean I played several hours of Star Wars The Old Republic using the new Holoseat. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f609.png" alt="😉" class="wp-smiley" style="height: 1em; max-height: 1em;" /> I was basically pleased, but I noticed a couple of problems.</p>
+<p>When I got up this morning, I decided to have a look at the previous night&#8217;s bugs. The first thing I did was to add serial debugging using this <a href="http://arduino.cc/en/Serial/IfSerial">information on serial i/o</a> (note the special case for the Leonardo) and this <a href="http://forum.arduino.cc/index.php?topic=46900.0">information on #ifdef</a> (the #ifdef trick is something we use n C all the time, so it was nice to see it works in Arduino). I should also point out during all of this work with serial communications on the Leonardo, I stumbled upon a little oddity of the Leonardo. It turns out the board takes on two different COM ports in Windows. The first is the bootloader and is only visible when the board first starts up and when it is loading code. The second is the COM port of the virtual serial interface used when the board is running. This second port does not show up in my list of printers/devices in Windows, but does show up in the Device Manager. This second COM port is the one which the Arduino IDE should be set to use so it can automatically upload code correctly and the Serial Monitor can connect to the Arduino.</p>
+<p>After I got the serial debug statements working, I found a number of bugs (I will spare you the gory details, but you can take a look at the source code in the SVN repository if you are interested). Thankfully, I was able to address all of the software bugs I found, thanks in no small part to the ability to send debug statement to my PC.</p>
+<p>With the software bugs out of the way, I turned my attention to the system level bugs from the night before. While working on one of the issues, I had an inspiration to invert the walk speed calculations from counting steps to timing steps. This let me increase the frequency at which I poll for walking speed so the system can stop walking in under a second as opposed to the original code which could take as much as a second. Testing tonight shows this level of response in stopping is pretty close to what we need (if not exactly what we need). I was also able to deal with an odd stuttering on the first step in a walk cycle, which only leaves one issue from the first night of testing.</p>
+<p>Considering the reviews of the reed switch said the magnet was too weak, this is hardly surprising. To be left with only this issue open after the first weekend&#8217;s work is great progress. The rest of the week will focus on testing to make sure the basic walk functionality is robust. Look for another report next weekend, when I should start working on the next feature.</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/assembly-has-begun/">Assembly has begun!</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.modelb.biz/assembly-has-begun/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Bill of Materials drafted, let&#8217;s order some parts</title>
+		<link>https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/</link>
+					<comments>https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/#respond</comments>
+		
+		<dc:creator><![CDATA[J. Simmons]]></dc:creator>
+		<pubDate>Mon, 16 Sep 2013 12:00:56 +0000</pubDate>
+				<category><![CDATA[Development News]]></category>
+		<category><![CDATA[arduino]]></category>
+		<category><![CDATA[leonardo]]></category>
+		<category><![CDATA[OSHW]]></category>
+		<category><![CDATA[v0.2]]></category>
+		<guid isPermaLink="false">http://www.modelb.biz/?p=182</guid>
+
+					<description><![CDATA[<p>So, after completing the v0.2 Detailed Design I turned my attention to the BOM. Since this is still development prototype, I wanted to source components which can be bread boarded using a prototype shield and mini-breadboard. The previous&#8230;</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/">Bill of Materials drafted, let&#8217;s order some parts</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>So, after completing the v0.2 <a href="https://opendesignengine.net/projects/holoseat/wiki/Detailed_Design?version=6">Detailed Design</a> I turned my attention to the <a href="https://opendesignengine.net/projects/holoseat/wiki/BOM?version=3">BOM</a>. Since this is still development prototype, I wanted to source components which can be bread boarded using a prototype shield and mini-breadboard. The previous version of the *Holoseat* was built using this approach, and I find it creates a usable, near finished product while maintaining the flexibility of bench top breadboarding. And, since my soldering skills leave something to be desired, I wanted to find a pre-assembled prototype shield (which, unfortunately ruled out <a href="http://www.adafruit.com/products/51">Adafruit&#8217;s Prototype Shield</a>).</p>
+<p>Since I am an Amazon Prime member, I often turn to Amazon for my initial search for almost everything. And, it should come as no surprise that there are plenty of Arduino related products on Amazon. As I was searching for prototype shields, I quickly came across <a href="http://www.amazon.com/SainSmart-Prototyping-Prototype-Breadboard-arduino/dp/B0079WI2MK/ref=sr_1_1?ie=UTF8&amp;qid=1379362952&amp;sr=8-1&amp;keywords=sainsmart+prototype+shield">this one</a> (see image below) from <a href="http://www.sainsmart.com/">SainSmart</a>. It looked like a pretty good deal. It&#8217;s a good price and includes jumper wires for use with the breadboard.</p>
+<p><img class="aligncenter" src="http://ecx.images-amazon.com/images/I/51PTiDqW6XL._SX385_.jpg" alt="SainSmart Arduino Prototype Shield" /></p>
+<p>As I wrapped up the BOM and I continued looking around Amazon, I came across this <a href="http://www.amazon.com/SainSmart-Leonardo-Tutorial-Instruction-Projects/dp/B00CXE5KQU/ref=sr_1_1?s=toys-and-games&amp;ie=UTF8&amp;qid=1379362857&amp;sr=1-1&amp;keywords=leonardo+kit">Intro to Arduino Kit</a> which includes a Leonardo board (see the <a href="https://opendesignengine.net/projects/holoseat/wiki/Detailed_Design?version=6">Detailed Design</a> for info on why we are moving to the Leonardo). Now this was very tempting. It includes pretty much everything from the <a href="https://opendesignengine.net/projects/holoseat/wiki/BOM?version=3">BOM</a> plus extra stuff for later experimentation, and at a nearly $20 savings over ordering components individually. Needless to say, I was pretty excited. But, I am thorough shopper, and truth be told I was not familiar with SainSmart. So, I decided to do some Googling to make sure this was really as good a deal as it seems. Boy am I glad I did.</p>
+<p>At first, I didn&#8217;t find much info one way or another. There were a couple of somewhat negative forum posts which I didn&#8217;t find very helpful on their own. But then I came across <a href="http://www.reddit.com/r/arduino/comments/16slmd/arduino_pins_protoshield_and_sainsmart_motorshield/">this thread</a> on Reddit. It looks like SainSmart is not being a good OSHW citizen (note, I have nothing against cloners, but I do have a problem with people not following license and trademark requirements, let alone changing components without proper documentation). Combined with the few bits I could gather from the other forum posts, I just cannot justify going with SainSmart for any components until I hear better news about their behavior with regards to OSHW.</p>
+<p>So, back to Amazon and Google I went looking for a prototype shield. The good news is the Arduino team has an assembled shield which Amazon sells. Plus, there is a mini-breadboard at Amazon which looks like it should fit on the shield. A few quick adjustments to the Bill of Materials, and it was done. Now it&#8217;s time to order parts. Woot!</p>
+<p>The post <a rel="nofollow" href="https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/">Bill of Materials drafted, let&#8217;s order some parts</a> appeared first on <a rel="nofollow" href="https://www.modelb.biz">Model B</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.modelb.biz/bill-of-materials-drafted-lets-order-some-parts/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
